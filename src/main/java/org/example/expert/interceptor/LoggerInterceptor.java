@@ -17,9 +17,14 @@ public class LoggerInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        // 로깅만 남기는 건데? 서비스 딴에서 하는 request 검증을 여기서 하라는 거 !
 
         String role = (String) request.getAttribute("userRole");
+
+        // role 이 비어있는 경우도 있을 경우 401 에러 반환합니다. Unauthorized
+        if (role == null || role.isEmpty()) {
+            response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "User role is missing.");
+            return false;
+        }
 
         // 관리자 권한이 없는 경우 403을 반환합니다.
         if (!UserRole.ADMIN.equals(UserRole.of(role))) {
