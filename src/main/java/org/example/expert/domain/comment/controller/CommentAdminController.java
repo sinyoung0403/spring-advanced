@@ -13,7 +13,7 @@ public class CommentAdminController {
 
     private final CommentAdminService commentAdminService;
 
-    // Return 이 Void 임. 상태 값을 안 주네 . .?
+    // 리팩토링 3 ) Return 을 201 상태 코드로 반환
     @DeleteMapping("/admin/comments/{commentId}")
     public ResponseEntity<Void> deleteComment(@PathVariable long commentId) {
         commentAdminService.deleteComment(commentId);
