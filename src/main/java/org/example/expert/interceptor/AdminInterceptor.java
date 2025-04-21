@@ -35,4 +35,8 @@ public class AdminInterceptor implements HandlerInterceptor {
         log.info("Request URL: {} | Time : {}", request.getRequestURI(), LocalDateTime.now());
         return true;
     }
+
+    public void setLogger(Logger logger) {
+        log = logger;
+    }
 }
