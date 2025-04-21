@@ -109,8 +109,8 @@
 ### Lv 6. 테스트 커버리지
 
 #### TestCoverage
-![Coverage Report _ Summary_page-0001](https://github.com/user-attachments/assets/a24e45ef-efba-4307-b6ba-00d3f2db39be)
 
+![Coverage Report _ Summary_page-0001](https://github.com/user-attachments/assets/4ded5a22-1613-4f72-8fa5-e220b214ac95)
 
 1) TodoServiceTest
 
