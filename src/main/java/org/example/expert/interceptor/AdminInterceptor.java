@@ -11,9 +11,9 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import java.time.LocalDateTime;
 
 @Component
-public class LoggerInterceptor implements HandlerInterceptor {
+public class AdminInterceptor implements HandlerInterceptor {
 
-    private static Logger log = LoggerFactory.getLogger(LoggerInterceptor.class);
+    private static Logger log = LoggerFactory.getLogger(AdminInterceptor.class);
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
