@@ -1,7 +1,7 @@
 package org.example.expert.config;
 
 import lombok.RequiredArgsConstructor;
-import org.example.expert.interceptor.LoggerInterceptor;
+import org.example.expert.interceptor.AdminInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -13,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class WebConfig implements WebMvcConfigurer {
 
-    private final LoggerInterceptor adminInterceptor;
+    private final AdminInterceptor adminInterceptor;
 
     // ArgumentResolver 등록
     @Override
